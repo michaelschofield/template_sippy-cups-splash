@@ -1,0 +1,115 @@
+/******************************************************************
+Site Name: Concerts at the Alvin Sherman Library - the Sippy Cups
+Author: Michael Schofield
+
+Stylesheet: Splash
+******************************************************************/
+/* ================== Fonts */
+@font-face { font-family: 'LondrinaSolidRegular'; src: url("fonts/LondrinaSolid-Regular-webfont.eot"); src: url("fonts/LondrinaSolid-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/LondrinaSolid-Regular-webfont.woff") format("woff"), url("fonts/LondrinaSolid-Regular-webfont.ttf") format("truetype"), url("fonts/LondrinaSolid-Regular-webfont.svg#LondrinaSolidRegular") format("svg"); font-weight: normal; font-style: normal; }
+
+/* ================== Variables ================== */
+/* ================== Helpful Classes */
+.sippy-gradient { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ec4e98), color-stop(100%, #f077b0)); background-image: -webkit-linear-gradient(top, #ec4e98, #f077b0); background-image: -moz-linear-gradient(top, #ec4e98, #f077b0); background-image: -o-linear-gradient(top, #ec4e98, #f077b0); background-image: -ms-linear-gradient(top, #ec4e98, #f077b0); background-image: linear-gradient(top, #ec4e98, #f077b0); }
+
+/* ================== Brand ================== */
+#logo { background: transparent url("concerts/images/logo(small).png") no-repeat 0 0; background-size: 300px 99px; width: 300px; height: 99px; margin: 0 auto; }
+
+/* ================== Base, Mobile Styles ================== */
+body { background: #111111 url("textures/noise.png"); color: white; }
+
+small { color: #f077b0; }
+
+.announcement { display: none; }
+
+.description, .details { color: #f077b0; font-family: 'LondrinaSolidRegular', Georgia, serif; font-weight: 200; }
+.description a, .description a:visited, .details a, .details a:visited { color: #f077b0; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.description a:hover, .description a:active, .description a:focus, .description a:visited:hover, .description a:visited:active, .description a:visited:focus, .details a:hover, .details a:active, .details a:focus, .details a:visited:hover, .details a:visited:active, .details a:visited:focus { color: white; }
+.description audio, .details audio { width: 75%; }
+.description h1, .description .h1, .description h2, .description .h2, .description h3, .description .h3, .description h4, .description .h4, .description h5, .description .h5, .details h1, .details .h1, .details h2, .details .h2, .details h3, .details .h3, .details h4, .details .h4, .details h5, .details .h5 { font-family: inherit; line-height: 1; }
+.description small, .details small { color: white; }
+
+.description { font-size: 1.5em; text-align: center; }
+.description a, .description a:visited { color: white; text-shadow: 1px 2px 2px #111; }
+.description a:hover, .description a:active, .description a:focus, .description a:visited:hover, .description a:visited:active, .description a:visited:focus { text-shadow: 1px 2px 5px #111; }
+
+.sample { border: 1px solid white; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; margin: 0 auto 1em; padding: 3px; }
+.sample .h3 { line-height: 1.5; }
+
+.header { height: auto; }
+
+.icon-redo { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
+
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's 
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and 
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) { #logo { background: transparent url("concerts/images/logo.png") no-repeat 0 0; background-size: 500px 166px; width: 500px; height: 166px; margin: 14px auto auto 0; }
+  .description { position: absolute; color: #111; }
+  /* ================== Behold the dragon! */
+  .announcement { height: 30px; display: block; }
+  .announcement img { width: 75%; }
+  .announcement span { position: absolute; right: -3em; margin-top: -7px; -webkit-transition: all 1s ease-out; -moz-transition: all 1s ease-out; -o-transition: all 1s ease-out; transition: all 1s ease-out; }
+  .announcement span:hover, .announcement span:active, .announcement span:focus { -webkit-transform: rotate(15deg); -moz-transform: rotate(15deg); -ms-transform: rotate(15deg); -o-transform: rotate(15deg); transform: rotate(15deg); }
+  .sample .h3 { line-height: 1; }
+  .fivecol { width: 100%; } }
+@media only screen and (min-width: 1024px) { .announcement img { width: 100%; }
+  .announcement span { right: 2em; }
+  .fivecol { width: 40.055248616%; }
+  .the-band { position: fixed; bottom: 0; right: 0; background: transparent url("concerts/images/band.png") no-repeat bottom right; background-size: 550px 429px; height: 429px; width: 550px; } }
+/*
+DESKTOP 
+This is the average viewing window. So Desktops, Laptops, and 
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) { #logo { background: transparent url("concerts/images/logo.png") no-repeat 0 0; background-size: 640px 211px; width: 640px; height: 211px; margin: 0 auto auto 0; }
+  .the-band { position: fixed; bottom: 0; right: 0; background: transparent url("concerts/images/band.png") no-repeat bottom right; height: 556px; width: 684px; } }
+/*
+LARGE VIEWING SIZE 
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) { #logo { background: transparent url("concerts/images/logo.png") no-repeat 0 0; background-size: 868px 286px; width: 868px; height: 286px; margin: 0 auto auto 0; } }
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with 
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { /****************************************************************** Site Name:  Author:   Stylesheet: Retina Screens & Devices Stylesheet  When handling retina screens you need to make adjustments, especially if you're not using font icons. Here you can add them in one neat place.  *****************************************************************/
+  /*   EXAMPLE  Let's say you have an image and you need to make sure it looks ok on retina screens. Let's say we have an icon which dimension are 24px x 24px. In your regular stylesheets, it would look something like this:  .icon { 	width: 24px; 	height: 24px; 	background: url(img/test.png) no-repeat; }  For retina screens, we have to make some adjustments, so that image doesn't look blurry. So, taking into account the image above and the dimensions, this is what we would put in our retina stylesheet:  .icon { 	background: url(img/test@2x.png) no-repeat; 	background-size: 24px 24px; }  So, you would create the same icon, but at double the resolution, meaning  it would be 48px x 48px. You'd name it the same, but with a @2x at the end (this is pretty standard practice). Set the background image so it matches the original dimensions and you are good to go.   */ }
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after, a:visited:after { content: " (" attr(href) ")"; }
+  a abbr[title]:after, a:visited abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  .sidebar, .page-navigation, .wp-prev-next, .respond-form, nav { display: none; } }
+/* ================== CSS3 Fixes ================== */
+.lt-ie8 .announcement span { display: none; }
+
+.lt-ie9 .sample { display: none; }
+
+.no-cssgradients .sippy-gradient { background: #ec4e98 url("concerts/images/sippy-gradient.jpg") repeat-x; }
+
+.no-backgroundsize #logo { background: transparent url("concerts/images/logo(no-bg-size).png") no-repeat 0 0; }
+.no-backgroundsize .the-band { background: transparent url("concerts/images/band(no-bg-size).png") no-repeat bottom right; }
